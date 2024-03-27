@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "graphics.h"
+#include "graphics.h" //very important header file for graphic based output.
 #include <conio.h>
 
 typedef struct
@@ -82,20 +82,18 @@ void main() {
 	scanf("%f", &balls[i].radius);
     }
 
-    /*printf("\n\nData to be simulated >>> \n Number of balls -> %d\n", numBalls);
+    /*
+    # # For text output # #
+    
+    printf("\n\nData to be simulated >>> \n Number of balls -> %d\n", numBalls);
 
     for (i = 0; i < numBalls; i++) {
 	printf("BALL %d: \nRadius -> %.2f\n (x, y) coordinates -> (%.2f, %.2f) \n(x, y) Velocities -> (%.2f, %.2f)\n\n", i + 1, balls[i].radius, balls[i].x, balls[i].y, balls[i].velx, balls[i].vely);
-    }*/
-    balls[1].velx =0;
+    }
+    */
 
     for (j = 0; j <= iterations; j++) {
 	cleardevice();
-	input = getch();
-
-	if(input == 'd'){
-	    //printf("\nup");
-	    balls[1].velx += 0.1; }
 
 	for (i = 0; i < numBalls; ++i) {
 	    drawBall(&balls[i]);
